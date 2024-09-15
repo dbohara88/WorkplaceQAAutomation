@@ -26,7 +26,8 @@ public class WorkplaceSearch extends BaseTest{
 		serpPage.serpAllResult(input.get("search"));
 		// serpAllResult validation
 		Assert.assertEquals(serpPage.serpAllResultValue(), input.get("search"));
-		
+		serpPage.serpPost(input.get("search"));
+		serpPage.serpPeople(input.get("search"));
 	}
 	
 	

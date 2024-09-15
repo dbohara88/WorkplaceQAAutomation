@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Workplace Automation Result</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sept 15, 2024 09:18:52 am</span></a>
+<a href="#"><span class="badge badge-primary">Sept 15, 2024 10:26:55 am</span></a>
 </li>
 </ul>
 </div>
@@ -86,7 +86,7 @@
           <div class="test-detail">
             <p class="name">search</p>
             <p class="text-sm">
-              <span>9:18:59 am</span> / <span>00:00:14:985</span>
+              <span>10:27:00 am</span> / <span>00:00:20:870</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,9 +95,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">search</h5>
-<span class='badge badge-success'>09.15.2024 9:18:59 am</span>
-<span class='badge badge-danger'>09.15.2024 9:19:14 am</span>
-<span class='badge badge-default'>00:00:14:985</span>
+<span class='badge badge-success'>09.15.2024 10:27:00 am</span>
+<span class='badge badge-danger'>09.15.2024 10:27:21 am</span>
+<span class='badge badge-default'>00:00:20:870</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -118,15 +118,37 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:19:14 am</td>
+        <td>10:27:21 am</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: did not expect [test] but found [test]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failEquals(Assert.java:1582)
-	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
-	at org.testng.Assert.assertNotEquals(Assert.java:2201)
-	at org.testng.Assert.assertNotEquals(Assert.java:2223)
-	at Tests.WorkplaceSearch.search(WorkplaceSearch.java:28)
+          <textarea readonly class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class='xnfveip'])[2] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class='xnfveip'])[2]' is not a valid XPath expression."}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b479e5e4b7ff32ecb11bed2443ac85c, findElement {value=//div[@class='xnfveip'])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\debug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56844}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56844/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b479e5e4b7ff32ecb11bed2443ac85c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at PageObjects.SerpPage.serpAllResult(SerpPage.java:63)
+	at Tests.WorkplaceSearch.search(WorkplaceSearch.java:26)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -163,7 +185,7 @@
           <div class="test-detail">
             <p class="name">search</p>
             <p class="text-sm">
-              <span>9:19:17 am</span> / <span>00:00:15:264</span>
+              <span>10:27:23 am</span> / <span>00:00:16:354</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -172,9 +194,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">search</h5>
-<span class='badge badge-success'>09.15.2024 9:19:17 am</span>
-<span class='badge badge-danger'>09.15.2024 9:19:33 am</span>
-<span class='badge badge-default'>00:00:15:264</span>
+<span class='badge badge-success'>09.15.2024 10:27:23 am</span>
+<span class='badge badge-danger'>09.15.2024 10:27:40 am</span>
+<span class='badge badge-default'>00:00:16:354</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -195,15 +217,37 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>9:19:32 am</td>
+        <td>10:27:40 am</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: did not expect [deepak] but found [deepak]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failEquals(Assert.java:1582)
-	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
-	at org.testng.Assert.assertNotEquals(Assert.java:2201)
-	at org.testng.Assert.assertNotEquals(Assert.java:2223)
-	at Tests.WorkplaceSearch.search(WorkplaceSearch.java:28)
+          <textarea readonly class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector
+from javascript error: {"status":32,"value":"Unable to locate an element with the xpath expression //div[@class='xnfveip'])[2] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class='xnfveip'])[2]' is not a valid XPath expression."}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.24.0', revision: '748ffc9bc3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd1a949b9edc95bcc21e8a197867eaee, findElement {value=//div[@class='xnfveip'])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\debug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56867}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56867/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bd1a949b9edc95bcc21e8a197867eaee
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at PageObjects.SerpPage.serpAllResult(SerpPage.java:63)
+	at Tests.WorkplaceSearch.search(WorkplaceSearch.java:26)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -255,12 +299,12 @@
 <span class="meta">
 <span class='badge log badge-danger'>2</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
+<p class="name">org.openqa.selenium.InvalidSelectorException</p>
 <p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.AssertionError</h4>
+<h4>org.openqa.selenium.InvalidSelectorException</h4>
 <span status="fail" class='badge log badge-danger'>2 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -274,14 +318,14 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>09:18:59 am</td>
+<td>10:27:00 am</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>search</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>09:19:17 am</td>
+<td>10:27:23 am</td>
 <td>
 <a href="#" class="linked" test-id='2' id='2'>search</a>
 </td>
@@ -303,13 +347,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sept 15, 2024 09:18:52 am</h3>
+<h3>Sept 15, 2024 10:26:55 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sept 15, 2024 09:19:33 am</h3>
+<h3>Sept 15, 2024 10:27:40 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -379,7 +423,7 @@
 </div></div>
 <script>
 var timeline = {
-"search":14.985,"search":15.264
+"search":20.87,"search":16.354
 };
 </script>
 <div class="row">
