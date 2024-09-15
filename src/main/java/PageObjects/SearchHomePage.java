@@ -54,10 +54,12 @@ public class SearchHomePage extends AbstractComponent{
 		a.moveToElement(searchProfile).click().sendKeys("test", Keys.chord(Keys.ENTER)).build().perform();
 	}
 	
-	public void searchOnTimelineInvalid()
+	public SerpPage searchOnTimelineInvalid()
 	{
 		Timeline().click();
 		Actions a = new Actions(driver);
 		a.moveToElement(searchProfile).click().sendKeys("asdasdhjdgyaishduha", Keys.chord(Keys.ENTER)).build().perform();
+		SerpPage serpPage = new SerpPage(driver);
+		return serpPage;
 	}
 }

@@ -20,7 +20,13 @@ public class SerpPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(xpath = "//div[contains(@class, 'x1a8lsjc xn6708d x1ye3gou x889kno')]")
+	List<WebElement> dropDownMenu;
 
+	@FindBy(xpath = "//*[text()='Today']")
+	WebElement dateSelect;
+	
 	@FindBy(xpath = "//a[contains(@href,'/search/posts/')]")
 	WebElement Post;
 
@@ -50,10 +56,7 @@ public class SerpPage extends AbstractComponent {
 
 	@FindBy(xpath = "(//div[@class='xnfveip'])[3]")
 	WebElement date;
-
-	@FindBy(xpath = "//*[text()='2024']")
-	WebElement dateSelect;
-
+	
 	@FindBy(xpath = "//input[@aria-label='Hide Comments']")
 	WebElement hideComment;
 
@@ -61,8 +64,6 @@ public class SerpPage extends AbstractComponent {
 	WebElement clearFilters;
 	
 	//People SERP
-	@FindBy(xpath = "//div[contains(@class, 'x1a8lsjc xn6708d x1ye3gou x889kno')]")
-	List<WebElement> peopleMenu;
 
 	@FindBy(xpath = "//div[@aria-checked='false']")
 	WebElement peopleFilter;
@@ -85,9 +86,42 @@ public class SerpPage extends AbstractComponent {
 	@FindBy(xpath= "//*[text()='Other skill...']")
 	WebElement otherSkill;
 	
+	//KL SERP
+	@FindBy(xpath= "//a[contains(@href,'/search/work_knowledge/?q')]")
+	WebElement kl;
+	
+	//GROUPS SERP
+	@FindBy(xpath = "//a[contains(@href,'/search/groups/?q')]")
+	WebElement groups;
+	
+	@FindBy(xpath = "//*[text()='Open Groups']")
+	WebElement groupPrivacy;
+	
+	@FindBy(xpath = "//*[text()='Your Team']")
+	WebElement groupMembers;
+	
+	@FindBy(xpath = "//*[text()='Announcements']")
+	WebElement groupType;
+	
+	//Files SERP
+	@FindBy(xpath = "//a[contains(@href,'/search/files/?q')]")
+	WebElement files;
+	
+	@FindBy(xpath = "//*[text()='Your Groups']")
+	WebElement filesPostedInGroup;
+	
+	//Events SERP
+	@FindBy(xpath = "//a[contains(@href,'/search/events/?q')]")
+	WebElement events;
+	
+	//Teams SERP
+	@FindBy(xpath = "//a[contains(@href,'/search/work_teams/?q')]")
+	WebElement teams;
+	
 	public void serpAllResult(String search) {
-		Actions a = new Actions(driver);
-		a.moveToElement(SearchBar()).click().sendKeys(search, Keys.chord(Keys.ENTER)).build().perform();
+		
+		movingToElement(search, SearchBar());
+		
 		mostRecentButton.click();
 		onlyPostSeenButton.click();
 		postedBy.click();
@@ -103,9 +137,9 @@ public class SerpPage extends AbstractComponent {
 	}
 
 	public void serpPost(String search) {
-		Actions a = new Actions(driver);
-		a.moveToElement(SearchBar()).click().sendKeys(search, Keys.chord(Keys.ENTER)).build().perform();
-
+		
+		movingToElement(search, SearchBar());
+		
 		Post.click();
 		mostRecentButton.click();
 		onlyPostSeenButton.click();
@@ -121,11 +155,13 @@ public class SerpPage extends AbstractComponent {
 	}
 
 	public void serpPeople(String search) {
+		
 		Actions a = new Actions(driver);
-		a.moveToElement(SearchBar()).click().sendKeys(search, Keys.chord(Keys.ENTER)).build().perform();
+		
+		movingToElement(search, SearchBar());
 
 		People.click();
-		peopleMenu.get(0).click();
+		dropDownMenu.get(0).click();
 		try {
 			peopleFilter.click();
 		} catch (Exception e) {
@@ -133,7 +169,7 @@ public class SerpPage extends AbstractComponent {
 			a.moveToElement(peopleListSelect.get(0)).click().build().perform();
 			//peopleListSelect.get(0).click();
 		}
-		peopleMenu.get(1).click();
+		dropDownMenu.get(1).click();
 		try {
 			peopleFilter.click();
 		} catch (Exception e) {
@@ -142,10 +178,10 @@ public class SerpPage extends AbstractComponent {
 			//peopleListSelect.get(0).click();
 		}
 
-		peopleMenu.get(2).click();
+		dropDownMenu.get(2).click();
 		peopleFilter.click();
 		
-		peopleMenu.get(3).click();
+		dropDownMenu.get(3).click();
 		try {
 			peopleFilter.click();
 		}catch(Exception e) {
@@ -154,7 +190,7 @@ public class SerpPage extends AbstractComponent {
 			//peopleListSelect.get(0).click();
 		}
 		
-		peopleMenu.get(4).click();
+		dropDownMenu.get(4).click();
 		try {
 			peopleFilter.click();
 		} catch(Exception e) {
@@ -166,7 +202,56 @@ public class SerpPage extends AbstractComponent {
 		waitForWebElementToAppear(clearFilters);
 		clearFilters.click();
 	}
-
+	
+	public void serpKL(String search)
+	{
+		movingToElement(search, SearchBar());
+		kl.click();
+	}
+	
+	public void serpGroups(String search)
+	{
+		movingToElement(search, SearchBar());
+		groups.click();
+		
+		dropDownMenu.get(0).click();
+		groupPrivacy.click();
+		
+		dropDownMenu.get(1).click();
+		groupMembers.click();
+		
+		dropDownMenu.get(2).click();
+		groupType.click();
+		clearFilters.click();
+	}
+	
+	public TimelinePage serpFiles(String search)
+	{
+		movingToElement(search, SearchBar());
+		files.click();
+		
+		dropDownMenu.get(0).click();
+		filesPostedInGroup.click();
+		clearFilters.click();
+		TimelinePage timelinePage = new TimelinePage(driver);
+		return timelinePage;
+	}
+	
+	public void serpEvents(String search)
+	{
+		movingToElement(search, SearchBar());
+		events.click();
+		
+		dropDownMenu.get(0).click();
+		dateSelect.click();
+		clearFilters.click();
+	}
+	
+	public void serpTeams(String search)
+	{
+		movingToElement(search, SearchBar());
+		teams.click();
+	}
 	public String serpAllResultValue() {
 		String[] r0 = serpResult.getText().split("\""); // (Results for "), (test")
 		String[] r1 = r0[1].split("\""); // test "

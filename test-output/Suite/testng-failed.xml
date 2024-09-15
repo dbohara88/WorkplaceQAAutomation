@@ -10,7 +10,7 @@
         <methods>
           <include name="launchApp"/>
           <include name="tearDown"/>
-          <include name="search" invocation-numbers="0 1"/>
+          <include name="search" invocation-numbers="1"/>
         </methods>
       </class> <!-- Tests.WorkplaceSearch -->
     </classes>

@@ -1,8 +1,12 @@
 package AbstractComponent;
 
 import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,6 +39,17 @@ public class AbstractComponent {
 		wh.until(ExpectedConditions.visibilityOf(findBy));
 	}
 	
+	public void movingToElement(String search, WebElement findby)
+	{
+		Actions a = new Actions(driver);
+		a.moveToElement(findby).click().sendKeys(search, Keys.chord(Keys.ENTER)).build().perform();
+	}
+	
+	public void windowScrollBy()
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0, 1000)");
+	}
 	public WebElement Home()
 	{
 		return HomeButton;
