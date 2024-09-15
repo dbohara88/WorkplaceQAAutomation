@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-15T19:19:06 IST" name="Default suite" finished-at="2024-09-15T19:20:40 IST" duration-ms="93985">
+  <suite started-at="2024-09-16T01:01:12 IST" name="Default suite" finished-at="2024-09-16T01:03:39 IST" duration-ms="147186">
     <groups>
     </groups>
-    <test started-at="2024-09-15T19:19:06 IST" name="Default test" finished-at="2024-09-15T19:20:40 IST" duration-ms="93985">
+    <test started-at="2024-09-16T01:01:12 IST" name="Default test" finished-at="2024-09-16T01:03:39 IST" duration-ms="147186">
       <class name="Tests.WorkplaceSearch">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:Tests.WorkplaceSearch@515c6049]" started-at="2024-09-15T19:19:06 IST" name="launchApp" finished-at="2024-09-15T19:19:09 IST" duration-ms="2867" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Tests.WorkplaceSearch@765d7657]" started-at="2024-09-16T01:01:13 IST" name="launchApp" finished-at="2024-09-16T01:01:16 IST" duration-ms="3313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="search(java.util.HashMap)[pri:0, instance:Tests.WorkplaceSearch@515c6049]" started-at="2024-09-15T19:19:09 IST" name="search" data-provider="getData" finished-at="2024-09-15T19:19:53 IST" duration-ms="43219" status="PASS">
+        <test-method signature="search(java.util.HashMap)[pri:0, instance:Tests.WorkplaceSearch@765d7657]" started-at="2024-09-16T01:01:16 IST" name="search" data-provider="getData" finished-at="2024-09-16T01:02:24 IST" duration-ms="68276" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,15 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.WorkplaceSearch@515c6049]" started-at="2024-09-15T19:19:53 IST" name="tearDown" finished-at="2024-09-15T19:19:53 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.WorkplaceSearch@765d7657]" started-at="2024-09-16T01:02:24 IST" name="tearDown" finished-at="2024-09-16T01:02:25 IST" duration-ms="496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:Tests.WorkplaceSearch@515c6049]" started-at="2024-09-15T19:19:53 IST" name="launchApp" finished-at="2024-09-15T19:19:55 IST" duration-ms="2257" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Tests.WorkplaceSearch@765d7657]" started-at="2024-09-16T01:02:25 IST" name="launchApp" finished-at="2024-09-16T01:02:27 IST" duration-ms="2523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="search(java.util.HashMap)[pri:0, instance:Tests.WorkplaceSearch@515c6049]" started-at="2024-09-15T19:19:55 IST" name="search" data-provider="getData" finished-at="2024-09-15T19:20:40 IST" duration-ms="45428" status="PASS">
+        <test-method signature="search(java.util.HashMap)[pri:0, instance:Tests.WorkplaceSearch@765d7657]" started-at="2024-09-16T01:02:27 IST" name="search" data-provider="getData" finished-at="2024-09-16T01:03:39 IST" duration-ms="71904" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,7 +41,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.WorkplaceSearch@515c6049]" started-at="2024-09-15T19:20:40 IST" name="tearDown" finished-at="2024-09-15T19:20:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.WorkplaceSearch@765d7657]" started-at="2024-09-16T01:03:39 IST" name="tearDown" finished-at="2024-09-16T01:03:39 IST" duration-ms="367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -32,6 +32,12 @@ public class AbstractComponent {
 	
 	@FindBy(xpath="//input[@placeholder=\"Search Workplace\"]")
 	WebElement searchBar;
+	
+	@FindBy(xpath = "//div[@aria-label=\"See more\"]/div/i")
+	WebElement seeMore;
+	
+	@FindBy(xpath = "//a[@href=\"https://qaprod.workplace.com/work/orgsearch/\"]")
+	WebElement directory;
 
 	public void waitForWebElementToAppear(WebElement findBy)
 	{
@@ -64,6 +70,16 @@ public class AbstractComponent {
 	public WebElement SearchBar()
 	{
 		return searchBar;
+	}
+	
+	public WebElement SeeMore()
+	{
+		return seeMore;
+	}
+	
+	public WebElement Directory()
+	{
+		return directory;
 	}
 	
 }

@@ -8,6 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import PageObjects.DirectoryPage;
+import PageObjects.GroupPage;
 import PageObjects.SearchHomePage;
 import PageObjects.SerpPage;
 import PageObjects.TimelinePage;
@@ -33,6 +34,11 @@ public class WorkplaceSearch extends BaseTest{
 		TimelinePage timelinePage = serpPage.serpFiles(input.get("search"));
 		
 		DirectoryPage directory = timelinePage.orgChart(input.get("search"));
+		GroupPage groupPage = directory.searchDirectory(input.get("search"));
+		groupPage.groupSearch(input.get("search"));
+		groupPage.searchGroupMember(input.get("search"));
+		
+		
 	}
 	
 	
