@@ -41,7 +41,7 @@ public class AbstractComponent {
 
 	public void waitForWebElementToAppear(WebElement findBy)
 	{
-		WebDriverWait wh = new WebDriverWait(driver, Duration.ofSeconds(2));
+		WebDriverWait wh = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wh.until(ExpectedConditions.visibilityOf(findBy));
 	}
 	
@@ -54,7 +54,7 @@ public class AbstractComponent {
 	public void windowScrollBy()
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0, 1000)");
+		js.executeScript("window.scrollBy(0, 500)");
 	}
 	public WebElement Home()
 	{

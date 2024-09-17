@@ -36,7 +36,7 @@ public class SerpPage extends AbstractComponent {
 	@FindBy(xpath = "//h1/span/span[contains(text(),'Results for ')]")
 	WebElement serpResult;
 
-	@FindBy(xpath = "//input[@aria-label=\"Most Recent First\"]")
+	@FindBy(xpath = "//input[@aria-label='Most Recent First']")
 	WebElement mostRecentButton;
 
 	@FindBy(xpath = "//input[@aria-label=\"Only Posts You've Seen\"]")
@@ -121,7 +121,7 @@ public class SerpPage extends AbstractComponent {
 	public void serpAllResult(String search) {
 		
 		movingToElement(search, SearchBar());
-		
+		waitForWebElementToAppear(mostRecentButton);
 		mostRecentButton.click();
 		onlyPostSeenButton.click();
 		postedBy.click();
@@ -141,6 +141,7 @@ public class SerpPage extends AbstractComponent {
 		movingToElement(search, SearchBar());
 		
 		Post.click();
+		waitForWebElementToAppear(mostRecentButton);
 		mostRecentButton.click();
 		onlyPostSeenButton.click();
 		postedBy.click();
